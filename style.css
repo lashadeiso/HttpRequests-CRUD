@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-primary-color: rgb(27, 16, 39);
+  --main-secondary-color: rgb(187, 173, 173);
+  --primary-font-color: rgb(244, 233, 233);
+  --secondary-font-color: rgb(37, 30, 45);
+  --btn-primary-color: rgb(175, 82, 138);
+  --active-color: rgb(172, 39, 119);
+  --border-color: rgb(87, 75, 75);
+}
+body {
+  background-color: var(--main-primary-color);
+  color: var(--main-secondary-color);
+}
+
+.sections-wrapper {
+  height: 70vh;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.section-1 {
+  width: 20%;
+}
+.register-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.section-2 {
+  width: 70%;
+}
+.submit-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  width: 100%;
+  background-color: var(--btn-primary-color);
+  border: none;
+  margin-top: 7%;
+}
+.btn:hover {
+  background-color: var(--active-color);
+}
+th,
+td {
+  color: var(--primary-font-color);
+  padding: 0.2rem !important;
+}
+td .btn {
+  margin-top: 0;
+}
+
+.edit-info {
+  cursor: pointer;
+}
+
+.human-img {
+  height: 2rem;
+  width: 2rem;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <title>Http requests</title>
+  </head>
+  <body>
+    <div class="sections-wrapper">
+      <div class="section-1">
+        <div class="register-header">
+          <h1>Add To List</h1>
+        </div>
+        <form id="form">
+          <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="text" class="form-control" id="eMail" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Upload Img</label>
+            <input class="form-control" type="file" id="img" />
+          </div>
+          <div class="submit-btn">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="section-2">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Image</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Edit Info</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody class="table-data-area"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!---------------- Modal-------------------------------- -->
+    <button
+      id="modalOpen"
+      type="button"
+      class="btn btn-primary d-none"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    ></button>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update Info</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="">First Name</label>
+              <input
+                type="text"
+                class="form-control update-user-info-inp"
+                id="updateFirstName"
+                placeholder="Enter here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Last Name</label>
+              <input
+                type="text"
+                class="form-control update-user-info-inp"
+                id="updateLastName"
+                placeholder="Enter here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">E-mail</label>
+              <input
+                type="text"
+                class="form-control update-user-info-inp"
+                id="updateEmail"
+                placeholder="Enter here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Enter user image</label>
+              <input
+                type="file"
+                class="form-control update-user-info-inp"
+                id="updateImage"
+                placeholder="Enter here"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              onclick="getDataToUpdateHuman()"
+              type="button"
+              class="btn btn-warning"
+              data-dismiss="modal"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
